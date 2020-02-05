@@ -3,11 +3,22 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+require('dotenv')
+const password = process.env.password
+const mongolab = `mongodb+srv://irfanmaulanasamdaina:${password}@indonesiapostalcode-qndru.mongodb.net/test?retryWrites=true&w=majority`
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+const MongoClient = require('mongodb').MongoClient
+
+MongoClient.connect( mongolab, (err, client) => {
+  if (err) return console.log(err)
+  db = client.db('postalcode')
+  app.listen(3000, () => {
+    console.log('listening on 3000')
+  })
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
