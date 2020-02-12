@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "irfanmaulanasam",
+    "password": null,
+    "database": "postcode-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "irfanmaulanasam",
+    "password": null,
+    "database": "postcode-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "irfanmaulanasam",
+    "password": null,
+    "database": "postcode-prod",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
